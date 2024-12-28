@@ -34,3 +34,5 @@ test_datagen = ImageDataGenerator(rescale=1./255)
 # Load training and testing datasets
 train_generator = train_datagen.flow_from_directory(train_dir, target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='binary')
 test_generator = test_datagen.flow_from_directory(test_dir, target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='binary')
+
+#Build CNN Model
