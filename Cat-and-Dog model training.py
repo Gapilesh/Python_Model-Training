@@ -19,3 +19,10 @@ import matplotlib.pyplot as plt
 import os
 
 #Prepare Dataset
+# Define paths for training and testing datasets
+train_dir = './training_set/training_set/'
+test_dir = './test_set/test_set/'
+
+# Define image size and batch size
+IMG_SIZE = (150, 150)
+BATCH_SIZE = 32
