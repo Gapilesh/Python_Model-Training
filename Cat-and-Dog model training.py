@@ -26,3 +26,11 @@ test_dir = './test_set/test_set/'
 # Define image size and batch size
 IMG_SIZE = (150, 150)
 BATCH_SIZE = 32
+
+# Create data generators with augmentation
+train_datagen = ImageDataGenerator(rescale=1./255, rotation_range=20, zoom_range=0.15, width_shift_range=0.2, height_shift_range=0.2, horizontal_flip=True)
+test_datagen = ImageDataGenerator(rescale=1./255)
+
+# Load training and testing datasets
+train_generator = train_datagen.flow_from_directory(train_dir, target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='binary')
+test_generator = test_datagen.flow_from_directory(test_dir, target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='binary')
