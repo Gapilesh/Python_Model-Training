@@ -20,6 +20,7 @@ import os
 
 #Prepare Dataset
 # Define paths for training and testing datasets
+#Provide proper pathway
 train_dir = './training_set/training_set/'
 test_dir = './test_set/test_set/'
 
